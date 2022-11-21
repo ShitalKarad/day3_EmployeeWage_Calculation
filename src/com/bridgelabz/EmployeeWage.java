@@ -11,6 +11,7 @@ public class EmployeeWage {
         int employeeCheck = (int) Math.floor(Math.random()*10)%3;
         System.out.println(employeeCheck);
         int dailyWage = 0;
+        
         switch (employeeCheck){
             case IS_PART_TIME:
                 dailyWage =PART_TIME_HOUR * WAGE_PER_HOUR;
