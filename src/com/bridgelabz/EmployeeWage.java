@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class EmployeeWage {
 
-    static final int WAGE_PER_HOUR = 20;
+     static final int WAGE_PER_HOUR = 20;
     static final int FULL_DAY_HOUR = 8;
     static final int PART_TIME_HOUR = 4;
     static final int IS_FULL_TIME = 2;
@@ -12,14 +12,15 @@ public class EmployeeWage {
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage");
-     System.out.println("Welcome to employee wage");
+        refactor();
+
+    }
+    public static void refactor(){
         int totalWage = 0;
 
         int dayCount = 1;
         int workingHours = 0;
-
         while (dayCount <WORKING_DAYS_PER_MONTH && workingHours < WORKING_HOURS_PER_MONTH ) {
-        while (dayCount <=WORKING_DAYS_PER_MONTH && workingHours <= WORKING_HOURS_PER_MONTH ) {
             int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println(employeeCheck);
             int dailyWage = 0;
@@ -42,8 +43,8 @@ public class EmployeeWage {
             totalWage = totalWage +dailyWage;
         }
         System.out.println("Total hours "+ workingHours);
-        System.out.println(" daily wage for month "+ totalWage);
-
+        System.out.println(" totalWage wage for month "+ totalWage);
 
     }
+
 }
