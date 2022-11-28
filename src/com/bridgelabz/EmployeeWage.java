@@ -42,7 +42,7 @@ public class EmployeeWage {
             totalWage = totalWage +dailyWage;
         }
         System.out.println("Total hours "+ workingHours);
-        System.out.println(" daily wage for day "+ totalWage);
+        System.out.println(" daily wage for month "+ totalWage);
 
 
     }
