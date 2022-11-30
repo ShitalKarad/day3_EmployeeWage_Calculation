@@ -1,13 +1,7 @@
 package com.bridgelabz;
 
 public class EmployeeWageCalculation {
-    static final int WAGE_PER_HOUR = 20;
-    static final int FULL_DAY_HOUR = 8;
-    static final int PART_TIME_HOUR = 4;
-    static final int IS_FULL_TIME = 2;
-    static final int IS_PART_TIME = 1;
-    static final  int WORKING_HOURS_PER_MONTH = 100;
-    static final int WORKING_DAYS_PER_MONTH = 20;
+
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage");
@@ -15,23 +9,34 @@ public class EmployeeWageCalculation {
 
     }
     public static void refactor(){
-        int totalWage = 0;
 
-        int dayCount = 1;
-        int workingHours = 0;
-        while (dayCount <WORKING_DAYS_PER_MONTH && workingHours < WORKING_HOURS_PER_MONTH ) {
+         int wagePerHour = 25;
+         int fullDayHour = 8;
+         int partTimeHour = 4;
+         int isFullTime = 2;
+         int isPartTime = 1;
+         int workingHoursPerMonth = 110;
+         int workingDaysPerMonth = 22;
+
+
+
+         int totalWage = 0;
+
+         int dayCount = 1;
+         int workingHours = 0;
+         while (dayCount <workingDaysPerMonth && workingHours < workingHoursPerMonth ) {
             int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println(employeeCheck);
             int dailyWage = 0;
             switch (employeeCheck) {
-                case IS_PART_TIME:
-                    dailyWage = PART_TIME_HOUR * WAGE_PER_HOUR;
-                    workingHours += PART_TIME_HOUR;
+                case 1:
+                    dailyWage = partTimeHour * wagePerHour;
+                    workingHours += partTimeHour;
                     System.out.println("Employee is part time " +dailyWage);
                     break;
-                case IS_FULL_TIME:
-                    dailyWage = FULL_DAY_HOUR * WAGE_PER_HOUR;
-                    workingHours +=FULL_DAY_HOUR;
+                case 2:
+                    dailyWage = fullDayHour * wagePerHour;
+                    workingHours +=fullDayHour;
                     System.out.println("Employee is full time " +dailyWage);
                     break;
                 default:
