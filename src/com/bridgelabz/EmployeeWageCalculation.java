@@ -1,30 +1,45 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class EmployeeWageCalculation {
-
-
+    static int  wagePerHour ;
+    static int workingHoursPerMonth ;
+    static int workingDaysPerMonth ;
+    static int count = 0;
     public static void main(String[] args) {
+
         System.out.println("Welcome to employee wage");
-        refactor();
+        EmployeeWageCalculation obj = new EmployeeWageCalculation();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your count of company's");
+        int company = sc.nextInt();
+
+        for ( int i = 1 ; i<=company ; i++ ){
+            System.out.println("Enter wage per hour ");
+            wagePerHour = sc.nextInt();
+            System.out.println("Enter workingHoursPerMonth ");
+            workingHoursPerMonth = sc.nextInt();
+            System.out.println("Enter workingDaysPerMonth ");
+            workingDaysPerMonth = sc .nextInt();
+            obj.refactor();
+
+        }
+
+
 
     }
-    public static void refactor(){
+    public void refactor(){
 
-         int wagePerHour = 25;
-         int fullDayHour = 8;
-         int partTimeHour = 4;
-         int isFullTime = 2;
-         int isPartTime = 1;
-         int workingHoursPerMonth = 110;
-         int workingDaysPerMonth = 22;
+        int fullDayHour = 8;
+        int partTimeHour = 4;
+        int isFullTime = 2;
+        int isPartTime = 1;
+        int totalWage = 0;
 
-
-
-         int totalWage = 0;
-
-         int dayCount = 1;
-         int workingHours = 0;
-         while (dayCount <workingDaysPerMonth && workingHours < workingHoursPerMonth ) {
+        int dayCount = 1;
+        int workingHours = 0;
+        while (dayCount <workingDaysPerMonth && workingHours < workingHoursPerMonth ) {
             int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println(employeeCheck);
             int dailyWage = 0;
@@ -46,8 +61,10 @@ public class EmployeeWageCalculation {
             dayCount++;
             totalWage = totalWage +dailyWage;
         }
+        count ++;
         System.out.println("Total hours "+ workingHours);
-        System.out.println(" totalWage wage for month "+ totalWage);
+        System.out.println(" totalWage wage for month company" + count +" "+ totalWage);
 
     }
-}
+    }
+
