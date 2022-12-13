@@ -18,8 +18,7 @@ public class EmployeeWage {
         int dayCount = 1;
         int workingHours = 0;
 
-        while (dayCount <WORKING_DAYS_PER_MONTH && workingHours < WORKING_HOURS_PER_MONTH ) {
-        while (dayCount <=WORKING_DAYS_PER_MONTH && workingHours <= WORKING_HOURS_PER_MONTH ) {
+        while (dayCount <WORKING_DAYS_PER_MONTH && workingHours < WORKING_HOURS_PER_MONTH ) 
             int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println(employeeCheck);
             int dailyWage = 0;
