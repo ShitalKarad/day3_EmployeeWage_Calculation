@@ -5,7 +5,6 @@ public class EmployeeWageCalculation {
     public static void main(String[] args) {
 
         System.out.println("Welcome to employee wage");
-        EmployeeWageCalculation obj = new EmployeeWageCalculation();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your count of company's");
         int company = sc.nextInt();
@@ -17,7 +16,7 @@ public class EmployeeWageCalculation {
             workingHoursPerMonth = sc.nextInt();
             System.out.println("Enter workingDaysPerMonth ");
             workingDaysPerMonth = sc .nextInt();
-            obj.wageCalculation();
+            wageCalculation();
         }
 
     }
