@@ -2,7 +2,6 @@ package com.bridgelabz;
 
 public class EmployeeWageCalculation {
      
-
     public static void main(String[] args) {
 
         System.out.println("Welcome to employee wage");
@@ -22,7 +21,7 @@ public class EmployeeWageCalculation {
         }
 
     }
-    public void wageCalculation(){
+    public static void wageCalculation(){
         int  wagePerHour ;
         int workingHoursPerMonth ;
         int workingDaysPerMonth ;
