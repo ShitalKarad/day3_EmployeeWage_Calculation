@@ -1,11 +1,7 @@
 package com.bridgelabz;
 
 public class EmployeeWageCalculation {
-
-
-    static int  wagePerHour ;
-    static int workingHoursPerMonth ;
-    static int workingDaysPerMonth ;
+     
 
     public static void main(String[] args) {
 
@@ -22,20 +18,19 @@ public class EmployeeWageCalculation {
             workingHoursPerMonth = sc.nextInt();
             System.out.println("Enter workingDaysPerMonth ");
             workingDaysPerMonth = sc .nextInt();
-            obj.refactor();
+            obj.wageCalculation();
         }
 
-
-
     }
-    public void refactor(){
-
+    public void wageCalculation(){
+        int  wagePerHour ;
+        int workingHoursPerMonth ;
+        int workingDaysPerMonth ;
         int fullDayHour = 8;
         int partTimeHour = 4;
         int isFullTime = 2;
         int isPartTime = 1;
         int totalWage = 0;
-
         int dayCount = 1;
         int workingHours = 0;
         while (dayCount <workingDaysPerMonth && workingHours < workingHoursPerMonth ) {
