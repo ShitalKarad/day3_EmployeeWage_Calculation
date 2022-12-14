@@ -11,10 +11,10 @@ public class EmployeeWageCalculation {
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage");
-        refactor();
+        class();
 
     }
-    public static void refactor(){
+    public static void class(){
         int totalWage = 0;
 
         int dayCount = 1;
